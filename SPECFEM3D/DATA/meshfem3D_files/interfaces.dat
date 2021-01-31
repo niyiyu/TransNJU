@@ -20,16 +20,16 @@
  interface3.dat
 
 # interface number 4 
- .true.                    301  251  3554000. 4004000.      10.d0      10.d0
+ .true.                    301  251  3554000. 400000.      10.d0      10.d0
  interface4.dat
 
 
 # for each layer, we give the number of spectral elements in the vertical direction
 # layer number 1 (-800m bottom)
  2
-# layer number 2 (-400m)
- 8
+# layer number 2 (-350m)
+ 15
 # layer number 3 (-100m)
- 10
+ 15
 # layer number 4 (0m surface)
  20 
