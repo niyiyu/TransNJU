@@ -26,7 +26,7 @@ SUPPRESS_UTM_PROJECTION         = .true.
 NPROC                           = 1
 
 # time step parameters
-NSTEP                           = 3000
+NSTEP                           = 15000
 DT                              = 0.001
 
 #-----------------------------------------------------------
@@ -148,11 +148,11 @@ MOVIE_TYPE                      = 1
 MOVIE_VOLUME                    = .false.
 SAVE_DISPLACEMENT               = .false.
 USE_HIGHRES_FOR_MOVIES          = .false.
-NTSTEP_BETWEEN_FRAMES           = 50
+NTSTEP_BETWEEN_FRAMES           = 100
 HDUR_MOVIE                      = 0.0
 
 # save AVS or OpenDX mesh files to check the mesh
-SAVE_MESH_FILES                 = .true.
+SAVE_MESH_FILES                 = .false.
 
 # path to store the local database file on each node
 LOCAL_PATH                      = ./DATABASES_MPI

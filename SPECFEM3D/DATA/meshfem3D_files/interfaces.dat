@@ -1,5 +1,5 @@
 # number of interfaces
- 2
+ 4
 #
 # We describe each interface below, structured as a 2D-grid, with several parameters : 
 # number of points along XI and ETA, minimal XI ETA coordinates 
@@ -8,15 +8,28 @@
 #
 # interface number 1 
 # SUPPRESS_UTM_PROJECTION  NXI  NETA LONG_MIN   LAT_MIN    SPACING_XI SPACING_ETA
- .true.                    191  161  3554600. 400400.      10.d0      10.d0
+ .true.                    301  251  3554000. 400000.      10.d0      10.d0
  interface1.dat
 
-# interface number 2 (topography, top of the mesh)
- .true.                    191  161  3554600. 400400.      10.d0      10.d0
+# interface number 2 
+ .true.                    301  251  3554000. 400000.      10.d0      10.d0
  interface2.dat
-#
+
+# interface number 3 
+ .true.                    301  251  3554000. 400000.      10.d0      10.d0
+ interface3.dat
+
+# interface number 4 
+ .true.                    301  251  3554000. 4004000.      10.d0      10.d0
+ interface4.dat
+
+
 # for each layer, we give the number of spectral elements in the vertical direction
-# layer number 1 (bottom layer)
+# layer number 1 (-800m bottom)
  2
-# layer number 2 (top layer)
- 10 
+# layer number 2 (-400m)
+ 8
+# layer number 3 (-100m)
+ 10
+# layer number 4 (0m surface)
+ 20 
