@@ -1,5 +1,5 @@
 # number of interfaces
- 4
+ 5
 #
 # We describe each interface below, structured as a 2D-grid, with several parameters : 
 # number of points along XI and ETA, minimal XI ETA coordinates 
@@ -15,21 +15,28 @@
  .true.                    301  251  3554000. 400000.      10.d0      10.d0
  interface2.dat
 
-# interface number 3 
+# interface number 3
  .true.                    301  251  3554000. 400000.      10.d0      10.d0
  interface3.dat
 
-# interface number 4 
+# interface number 4
  .true.                    301  251  3554000. 400000.      10.d0      10.d0
  interface4.dat
+
+# interface number 5
+ .true.                    301  251  3554000. 400000.      10.d0      10.d0
+ interface5.dat
+
 
 
 # for each layer, we give the number of spectral elements in the vertical direction
 # layer number 1 (-800m bottom)
  2
-# layer number 2 (-350m)
- 15
-# layer number 3 (-100m)
- 15
-# layer number 4 (0m surface)
- 20 
+# layer number 2 (-500m)
+ 14
+# layer number 3 (-250m)
+ 21
+# layer number 4 (-100m)
+ 28
+# layer number 5 (0m surface)
+ 38

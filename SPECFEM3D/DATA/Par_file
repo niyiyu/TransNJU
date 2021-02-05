@@ -222,7 +222,7 @@ SAVE_SEISMOGRAMS_IN_ADJOINT_RUN = .false.
 USE_BINARY_FOR_SEISMOGRAMS      = .true.
 
 # output seismograms in Seismic Unix format (binary with 240-byte-headers)
-SU_FORMAT                       = .true
+SU_FORMAT                       = .true.
 
 # output seismograms in ASDF (requires asdf-library)
 ASDF_FORMAT                     = .false.
