@@ -14,7 +14,7 @@ load('./Elevation/GPS2.mat');
 load('./Elevation/Profile.mat');
 profile = [S0;S1;S2;S3;S4;S5;S6;S7;S8;S9];
 
-[xx_pad, yy_pad] = meshgrid(3554000:10:3557000, 400000:10:402500);
+[xx_pad, yy_pad] = meshgrid(3554400:10:3556800, 400000:10:402400);
 [xx, yy] = meshgrid(3554500:10:3556500, 400400:10:402100);
 % v4
 % nearest
@@ -24,7 +24,8 @@ profile = [S0;S1;S2;S3;S4;S5;S6;S7;S8;S9];
 method = 'v4';
 topo = griddata([GPS2(:,1);profile(:,1)],[GPS2(:,2);profile(:,2)],[GPS2(:,3);profile(:,3)],xx,yy,method);
 
-topo_pad = padarray(topo,[40,50],'replicate','both');
+
+topo_pad = padarray(topo,[35,20],'replicate','both');
 topo_grad = gradient(topo_pad);
 % figure()
 
@@ -76,7 +77,7 @@ axis equal
 
 
 %%
-contour(yy_pad,xx_pad,topo_pad, 20);hold on
+contour(yy_pad,xx_pad,topo_smooth, 20);hold on
 % plot(GPS2(:,2), GPS2(:,1),'r^');
 % xlabel('UTM Axis Y [m]', 'FontSize', 20);
 % ylabel('UTM Axis X [m]', 'FontSize', 20);
@@ -87,39 +88,52 @@ ylabel(colorbar,'Elevation [m]', 'FontSize', 20);
 set(gcf,'color','none');
 set(gca,'color','none'); 
 set(gcf,'InvertHardCopy','off');
+
+
 %%
-path = '/Volumes/YiyuNiWDC/TransNJU/DATA/meshfem3D_files';
+factorx = 12/1;
+factory = 12/1;
+path = '/Users/niyiyu/Desktop/NJU/TransNJU/SPECFEM3D_XYZ/DATA/meshfem3D_files';
 %write top interface
-fid = fopen([path, '/interface4.dat'],'w');
-for i = 1:251
-    for j = 1:301
+fid = fopen([path, '/interface5.dat'],'w');
+for i = 1:(240/factorx + 1)
+    for j = 1:(240/factory + 1)
         fprintf(fid, '%6.2f \n', topo_smooth(i,j));
+%         fprintf(fid, '%6.2f \n', 20);
     end
 end
 fclose(fid);
 
-%%
+
 %write middle interface
-fid = fopen([path, '/interface3.dat'],'w');
-for i = 1:251
-    for j = 1:301
-        fprintf(fid, '%6.2f \n', -100.);
+fid = fopen([path, '/interface4.dat'],'w');
+for i = 1:(240/factorx + 1)
+    for j = 1:(240/factory + 1)
+        fprintf(fid, '%6.2f \n', -80);
     end
 end
 fclose(fid);
 %write middle interface
-fid = fopen([path, '/interface2.dat'],'w');
-for i = 1:251
-    for j = 1:301
-        fprintf(fid, '%6.2f \n', -500.);
+fid = fopen([path, '/interface3.dat'],'w');
+for i = 1:(240/factorx + 1)
+    for j = 1:(240/factory + 1)
+        fprintf(fid, '%6.2f \n', -170);
     end
 end
 fclose(fid);
 %write bottom interface
+fid = fopen([path, '/interface2.dat'],'w');
+for i = 1:(240/factorx + 1)
+    for j = 1:(240/factory + 1)
+        fprintf(fid, '%6.2f \n', -330);
+    end
+end
+fclose(fid);
+
 fid = fopen([path, '/interface1.dat'],'w');
-for i = 1:251
-    for j = 1:301
-        fprintf(fid, '%6.2f \n', -800.);
+for i = 1:(240/factorx + 1)
+    for j = 1:(240/factory + 1)
+        fprintf(fid, '%6.2f \n', -800);
     end
 end
 fclose(fid);

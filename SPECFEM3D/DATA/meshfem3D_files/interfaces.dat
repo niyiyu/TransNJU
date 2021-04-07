@@ -8,23 +8,23 @@
 #
 # interface number 1 
 # SUPPRESS_UTM_PROJECTION  NXI  NETA LONG_MIN   LAT_MIN    SPACING_XI SPACING_ETA
- .true.                    301  251  3554000. 400000.      10.d0      10.d0
+ .true.                    241  241  3554400. 400000.      10.d0      10.d0
  interface1.dat
 
 # interface number 2 
- .true.                    301  251  3554000. 400000.      10.d0      10.d0
+ .true.                    241  241  3554400. 400000.      10.d0      10.d0
  interface2.dat
 
 # interface number 3
- .true.                    301  251  3554000. 400000.      10.d0      10.d0
+ .true.                    241  241  3554400. 400000.      10.d0      10.d0
  interface3.dat
 
 # interface number 4
- .true.                    301  251  3554000. 400000.      10.d0      10.d0
+ .true.                    241  241  3554400. 400000.      10.d0      10.d0
  interface4.dat
 
 # interface number 5
- .true.                    301  251  3554000. 400000.      10.d0      10.d0
+ .true.                    241  241  3554400. 400000.      10.d0      10.d0
  interface5.dat
 
 
@@ -32,11 +32,11 @@
 # for each layer, we give the number of spectral elements in the vertical direction
 # layer number 1 (-800m bottom)
  2
-# layer number 2 (-500m)
+# layer number 2 (-300m)
  14
-# layer number 3 (-250m)
- 21
-# layer number 4 (-100m)
- 28
-# layer number 5 (0m surface)
- 38
+# layer number 3 (-140m)
+ 10
+# layer number 4 (-50m)
+ 11
+# layer number 5 (topo)
+ 14

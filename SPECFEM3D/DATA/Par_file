@@ -23,11 +23,11 @@ UTM_PROJECTION_ZONE             = 20
 SUPPRESS_UTM_PROJECTION         = .true.
 
 # number of MPI processors
-NPROC                           = 1
+NPROC                           = 4
 
 # time step parameters
-NSTEP                           = 15000
-DT                              = 0.001
+NSTEP                           = 30000
+DT                              = 0.00005
 
 #-----------------------------------------------------------
 #
@@ -56,7 +56,7 @@ NGNOD                           = 8
 #   1d_prem,1d_socal,1d_cascadia
 # 3D models available are:
 #   aniso,external,gll,salton_trough,tomo,SEP,coupled,...
-MODEL                           = default
+MODEL                           = gll
 
 # path for external tomographic models files
 TOMOGRAPHY_PATH                 = ./DATA/tomo_files/
@@ -205,12 +205,12 @@ PRINT_SOURCE_TIME_FUNCTION      = .false.
 #-----------------------------------------------------------
 
 # interval in time steps for writing of seismograms
-NTSTEP_BETWEEN_OUTPUT_SEISMOS   = 10000
+NTSTEP_BETWEEN_OUTPUT_SEISMOS   = 100000
 
 # decide if we save displacement, velocity, acceleration and/or pressure in forward runs (they can be set to true simultaneously)
 # currently pressure seismograms are implemented in acoustic (i.e. fluid) elements only
-SAVE_SEISMOGRAMS_DISPLACEMENT   = .false.
-SAVE_SEISMOGRAMS_VELOCITY       = .true.
+SAVE_SEISMOGRAMS_DISPLACEMENT   = .true.
+SAVE_SEISMOGRAMS_VELOCITY       = .false.
 SAVE_SEISMOGRAMS_ACCELERATION   = .false.
 SAVE_SEISMOGRAMS_PRESSURE       = .false.   # currently implemented in acoustic (i.e. fluid) elements only
 
@@ -361,7 +361,7 @@ BROADCAST_SAME_MESH_AND_MODEL   = .false.
 #-----------------------------------------------------------
 
 # set to true to use GPUs
-GPU_MODE                        = .false.
+GPU_MODE                        = .true.
 
 # ADIOS Options for I/Os
 ADIOS_ENABLED                   = .false.
