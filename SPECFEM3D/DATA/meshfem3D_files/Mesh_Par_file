@@ -27,7 +27,7 @@ NEX_ETA                         = 576
 
 # number of MPI processors along xi and eta (can be different)
 NPROC_XI                        = 2
-NPROC_ETA                       = 2 
+NPROC_ETA                       = 2
 
 #-----------------------------------------------------------
 #
@@ -102,7 +102,7 @@ NMATERIALS                      = 1
 NREGIONS                        = 1
 # define the different regions of the model as :
 #NEX_XI_BEGIN  #NEX_XI_END  #NEX_ETA_BEGIN  #NEX_ETA_END  #NZ_BEGIN #NZ_END  #material_id
-1               576          1               576             1        51       1
+1               576          1               576             1        61       1
 #1              64            1               64             5         5        2
 #1              64            1               64             6         15       3
 #14             25            7               19             7         10       4
