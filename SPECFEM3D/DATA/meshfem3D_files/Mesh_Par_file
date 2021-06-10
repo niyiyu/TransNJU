@@ -42,9 +42,9 @@ NDOUBLINGS                      = 3
 # NZ_DOUBLING_1 is the parameter to set up if there is only one doubling layer
 # (more doubling entries can be added if needed to match NDOUBLINGS value)
 
-NZ_DOUBLING_1                   = 14
-NZ_DOUBLING_2                   = 22
-NZ_DOUBLING_3			= 31
+NZ_DOUBLING_1                   = 16
+NZ_DOUBLING_2                   = 26
+NZ_DOUBLING_3			= 37
 
 
 
